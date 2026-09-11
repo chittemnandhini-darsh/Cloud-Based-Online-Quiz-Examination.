@@ -147,7 +147,7 @@ The application can be deployed on a cloud platform so that students can access 
 
 In a larger implementation, cloud database services can be used to store student information, questions, answers, and examination results.
 
-images:
+
 <img width="343" height="398" alt="Screenshot 2026-09-11 212826" src="https://github.com/user-attachments/assets/6f08a909-1a16-4357-89b9-375c600eebda" /><br><br>
 <img width="443" height="313" alt="Screenshot 2026-09-11 212849" src="https://github.com/user-attachments/assets/383d951f-6457-4a60-a945-a5ffaa7280f4"><br><br>
 <img width="359" height="258" alt="Screenshot 2026-09-11 212908" src="https://github.com/user-attachments/assets/cab7bc34-3a6a-4770-89d0-e6d9791e9b2c" />
