@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card result-card">
+
+            <h1>Examination Result</h1>
+
+            <div class="result">
+
+                <h2>
+                    Score: {{ score }} / {{ total }}
+                </h2>
+
+                <h2>
+                    Percentage: {{ percentage }}%
+                </h2>
+
+            </div>
+
+            {% if percentage|float >= 50 %}
+
+                <p class="success">
+                    🎉 Congratulations! You Passed.
+                </p>
+
+            {% else %}
+
+                <p class="fail">
+                    Try Again. Keep Learning!
+                </p>
+
+            {% endif %}
+
+            <a href="/">
+                <button>Take Quiz Again</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

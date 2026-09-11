@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Quiz Examination</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Cloud-Based Online Quiz</h1>
+
+            <p class="subtitle">
+                Online Quiz Examination System
+            </p>
+
+            <div class="info">
+                <p>📝 Total Questions: 5</p>
+                <p>⏱️ Time Limit: 5 Minutes</p>
+                <p>💻 Online Examination</p>
+                <p>☁️ Cloud-Based System</p>
+            </div>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your name"
+            >
+
+            <button onclick="startQuiz()">
+                Start Examination
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

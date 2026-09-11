@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Online Examination</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <div class="quiz-header">
+
+            <h1>Online Examination</h1>
+
+            <div id="timer">
+                05:00
+            </div>
+
+        </div>
+
+        <form id="quizForm">
+
+            {% for q in questions %}
+
+            <div class="question-card">
+
+                <h3>
+                    {{ loop.index }}. {{ q.question }}
+                </h3>
+
+                {% for option in q.options %}
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="{{ q.id }}"
+                        value="{{ option }}"
+                    >
+
+                    {{ option }}
+
+                </label>
+
+                {% endfor %}
+
+            </div>
+
+            {% endfor %}
+
+            <button type="button"
+                    onclick="submitQuiz()"
+                    class="submit-btn">
+
+                Submit Examination
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
